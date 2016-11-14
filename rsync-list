@@ -1,0 +1,25 @@
+DATE=`date "+%Y-%m-%d-%H_%M_%S"`
+
+#folder where the backup goes 
+DESTPREFIX=/media/`whoami`/backup/$HOSTNAME
+
+#files with include and exclude pattern (check rsync format)
+EXCLUDEFILE=$CONFOLDER/rsync-exclude
+INCLUDEFILE=$CONFOLDER/rsync-include
+
+# for each source, select a destination and a permission needed
+#sources:
+src[1]="$HOME"
+src[2]="/etc /root"
+src[3]="/var/lib/docker"
+
+#destinations:
+dest[1]="$DESTPREFIX/home"
+dest[2]="$DESTPREFIX/system"
+dest[3]="$DESTPREFIX/docker"
+
+#permissions needed:
+users[1]=x0gd
+users[2]=root
+users[3]=root
+

@@ -1,0 +1,10 @@
+- *~ 
+- *.o
+- .cache
+- .Cache
+- cache/
+- Cache/
+- log/
+- cxoffice/
+- *.tmp
+- *.iso

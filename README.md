@@ -1,21 +1,25 @@
-= Small bash script to backup folders
+# Small bash script to backup folders
 
-this script use incremental backups with hard links, pretty like TimeMachine.
+This script uses incremental backups with hard links, pretty like TimeMachine.
 
-== Instructions:
+## Instructions:
 
-* Clone the repo:
+1 - Clone the repo:
 ```
 git clone https://github.com/rgrcnh/bash-backup.git
 ```
-* Use:
+2 -  Configure:
 
-edit rsync-file and add origem and destionations and needed permission.
-edit rsync-include and rsync-exclude to include/exlude file and folders
+rsync-file, rsync-include and exclude shoud reside inside the same scrit folder, then...
+. Edit rsync-file and add origem and destinations and needed permission.
+. Edit rsync-include and rsync-exclude to include/exlude file and folders
+. Set the script executable:
 
-Set the script executable and run it. Follow the screen instructions:
 ```
-chmod +x backup.sh
+chmod +x backup.sh 
+```
+
+3 - Execute the script and follow the screen menu.
+```
 ./bachup.sh 
 ```
-
